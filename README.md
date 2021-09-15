@@ -2,8 +2,6 @@
 ## About
 Nvim-reload is a Neovim plugin that allows you to reload your entire Neovim config completely, including your start plugins. It also reloads all lua modules inside your Neovim config directory.
 
-**THIS PROJECT IS NO LONGER BEING MAINTAINED. YOU MIGHT STILL BE ABLE TO USE IT BUT DO NOT EXPECT ANY ISSUES YOU HAVE WITH IT TO BE FIXED. THOSE WILLING TO MAINTAIN IT CAN FEEL FREE TO CREATE A FORK**
-
 ### Requires:
 * Neovim >= 0.5
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
@@ -11,23 +9,23 @@ Nvim-reload is a Neovim plugin that allows you to reload your entire Neovim conf
 ## How to install
 * [packer.nvim](https://github.com/wbthomason/packer.nvim/):
 ```
-use 'famiu/nvim-reload'
+use 'ashincoder/nvim-reload'
 ```
 
 * [paq-nvim](https://github.com/savq/paq-nvim/)
 ```
-paq 'famiu/nvim-reload'
+paq 'ashincoder/nvim-reload'
 ```
 
 * [vim-plug](https://github.com/junegunn/vim-plug/):
 ```
-Plug 'famiu/nvim-reload'
+Plug 'ashincoder/nvim-reload'
 ```
 
 ## How to use
-Just install the plugin and it'll define two commands for you, `:Reload` and `:Restart`, to reload and restart your Vim config, respectively. Note that 'restart' here just means reloading and manually triggering the `VimEnter` autocmd to emulate a new run of Vim, it will not actually restart Vim.
+Just install the plugin and it'll define a command for you, `:Restart`, to reload and restart your Vim config, respectively. Note that 'restart' here just means reloading, it will not actually restart Vim.
 
-You can also use the following Lua functions `require('nvim-reload').Reload()` and `require('nvim-reload').Restart()` instead of the `:Reload` and `:Restart` commands.
+You can also use the following Lua function `require('nvim-reload').Restart()` instead of the `:Restart` commands.
 
 ### Configuration
 By default, nvim-reload reloads:
@@ -91,9 +89,5 @@ end
 **NOTE:** The directories provided in `lua_reload_dirs` and `vim_reload_dirs` can be globs, which will automatically be expanded by the plugin.
 
 ## Note
-This plugin is still quite new and might have some bugs. And in case it does, feel free to make an issue here to report them.
-
-## Self-plug
-If you liked this plugin, also check out:
-- [feline.nvim](https://github.com/famiu/feline.nvim) - A nice customizable statusline for Neovim written in Lua.
-- [bufdelete.nvim](https://github.com/famiu/bufdelete.nvim) - Delete Neovim buffers without losing your window layout.
+This plugin is still quite new and might have some bugs. And in case it does, feel free to make an issue and try to contribute
+PR's are welcome. Just fork it create a new branch and contribute.
